@@ -16,9 +16,9 @@ Run through every item when creating or refining a skill. Items marked **(blocki
 - [ ] Written in third person ("Processes X" not "I help you process X")
 - [ ] Includes WHAT — specific capabilities
 - [ ] Includes WHEN — trigger terms and activation scenarios
+- [ ] Contains the phrases users would naturally say (trigger terms)
 - [ ] Specific enough to distinguish from other skills
 - [ ] Does NOT overlap with other existing skills' trigger terms
-- [ ] Contains keywords the user would naturally say
 
 ## Content Quality
 
@@ -28,6 +28,7 @@ Run through every item when creating or refining a skill. Items marked **(blocki
 - [ ] Examples are concrete with real input/output, not abstract
 - [ ] No time-sensitive information (or uses current/deprecated pattern)
 - [ ] Forward slashes in all file paths
+- [ ] 2-3 concrete use cases were defined before writing
 
 ## Structure
 
@@ -46,6 +47,7 @@ Run through every item when creating or refining a skill. Items marked **(blocki
 - [ ] Scripts (if any) have documented dependencies
 - [ ] Scripts (if any) have no magic numbers — all constants justified
 - [ ] Clear "Run" vs "See" intent for every script reference
+- [ ] `allowed-tools` declared if using specific tools (experimental)
 
 ## Portability
 
@@ -53,9 +55,10 @@ Run through every item when creating or refining a skill. Items marked **(blocki
 - [ ] Relative file references work from the skill's directory
 - [ ] Optional frontmatter fields (`license`, `metadata`, `compatibility`) included if skill will be shared
 
-## Final Checks
+## Testing
 
-- [ ] Skill activates correctly when tested with representative prompts
-- [ ] Skill does NOT activate on unrelated prompts
-- [ ] Output matches expectations across different request phrasings
+- [ ] **Triggering**: Skill activates correctly on representative prompts
+- [ ] **Triggering**: Skill does NOT activate on unrelated prompts
+- [ ] **Functional**: Output matches expectations across different request phrasings
+- [ ] **Performance**: Skill improves quality/speed over no-skill baseline
 - [ ] All referenced files (references/, scripts/, assets/) actually exist

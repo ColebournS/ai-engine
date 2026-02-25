@@ -46,6 +46,7 @@ Before planning, understand the relevant parts of the codebase:
    - Deployment and configuration patterns
 3. **Map dependencies**: What existing code will the feature interact with?
 4. **Check for prior art**: Has something similar been built before? Can it be extended?
+5. **Identify integration points**: Does this feature need external tools or services? Consider whether existing MCP integrations, agent skills, or CLI tools already provide the needed capabilities.
 
 Use the explore subagent or search tools to do this efficiently. Focus on understanding patterns, not reading every file.
 
@@ -115,6 +116,9 @@ Use the appropriate template based on complexity:
 
 ### Rollout Considerations
 [Feature flags, gradual rollout, rollback plan, monitoring — omit for internal/low-risk changes]
+
+### Open Questions
+[Unresolved decisions, information still needed, assumptions that need validation — omit if none]
 ```
 
 ### Step 6: Iterate
@@ -137,6 +141,7 @@ Not every section is needed for every plan. Apply judgment:
 | Risks & Mitigations | Non-trivial chance of regression or failure |
 | Data Model Changes | Schema or persistent state is affected |
 | Rollout Considerations | User-facing change or production risk |
+| Open Questions | Unresolved decisions or assumptions needing validation |
 
 For small tasks, collapsing the plan into 3-5 bullet points is perfectly fine. The goal is to surface the right information, not to fill a template.
 

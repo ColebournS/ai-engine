@@ -1,6 +1,6 @@
 ---
 name: code-review
-description: Reviews code for bugs, security vulnerabilities, performance issues, edge cases, and consistency with codebase patterns. Use when the user wants a code review, second opinion, double-check, quality check, sanity check, or asks to review changes, diffs, files, or pull requests.
+description: Reviews code for bugs, security vulnerabilities, performance issues, edge cases, and consistency with codebase patterns. Use when the user wants a code review, audit, second opinion, double-check, quality check, sanity check, or asks to review, inspect, or check changes, diffs, files, or pull requests.
 ---
 
 # Code Review
@@ -61,7 +61,17 @@ For every issue you identify:
 3. Check if it's an existing pattern in the codebase (intentional, even if not ideal)
 4. Only report issues you are confident about — false positives erode trust
 
-### Step 5: Report Findings
+### Step 5: Run Automated Checks
+
+Before reporting, run available automated checks to corroborate findings:
+
+1. Check for linter errors on changed files (use lint tools if available)
+2. Run related tests if a test runner is configured — note any failures
+3. Check for type errors if the project uses a type checker
+
+Don't duplicate what automated tools catch — focus your review on issues that require human judgment. If automated checks surface issues, include them briefly under the appropriate severity.
+
+### Step 6: Report Findings
 
 Present the review in this format:
 

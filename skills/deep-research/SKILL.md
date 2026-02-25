@@ -61,6 +61,8 @@ For each research question:
 - Include the current year for topics where recency matters
 - Search for counterarguments and criticisms, not just positive coverage
 - If a topic has academic depth, search for papers, studies, or technical specifications
+- Launch independent searches in parallel when questions don't depend on each other — this significantly speeds up research
+- Fetch primary sources directly (official docs, papers, authoritative blogs) rather than relying solely on search summaries — summaries can miss nuance or introduce inaccuracy
 
 **If iterative mode:** After completing research on the first 2-3 questions, present interim findings and ask the user which areas to prioritize next.
 
@@ -70,9 +72,10 @@ Combine research into a coherent narrative:
 
 1. **Identify themes** — What patterns emerge across sources?
 2. **Map consensus vs disagreement** — Where do sources agree? Where do they diverge, and why?
-3. **Assess source quality** — Weight authoritative primary sources higher than opinion pieces
+3. **Assess source quality** — Weight authoritative primary sources higher than opinion pieces. Verify key claims by fetching the original source rather than trusting second-hand summaries.
 4. **Connect the dots** — Draw insights that individual sources don't make explicit
 5. **Note gaps** — What couldn't be determined? What needs further investigation?
+6. **Check recency** — For each key finding, note when the source was published. Flag findings that may be outdated and search for updates if the topic moves fast.
 
 ### Step 6: Deliver the Report
 

@@ -1,6 +1,6 @@
 ---
 name: systematic-debugging
-description: Diagnoses bugs, test failures, and unexpected behavior through structured root cause analysis. Uses a four-phase process (reproduce, isolate, hypothesize, fix) instead of guessing. Use when the user encounters a bug, error, test failure, crash, unexpected behavior, or asks to debug, investigate, diagnose, troubleshoot, or figure out why something isn't working.
+description: Diagnoses bugs, test failures, and unexpected behavior through structured root cause analysis. Uses a four-phase process (reproduce, isolate, hypothesize, fix) instead of guessing. Use when the user encounters a bug, error, test failure, crash, regression, unexpected behavior, or asks to debug, investigate, diagnose, troubleshoot, fix, or figure out why something isn't working or broke.
 ---
 
 # Systematic Debugging
@@ -59,6 +59,7 @@ Once you've confirmed the root cause:
 2. **Implement the fix** — address the root cause, not the symptom. One change, not a bundle of "while I'm here" improvements.
 3. **Verify the fix** — run the failing test (now passes), run all related tests (still pass), confirm no new warnings or errors.
 4. **Check for related instances** — search the codebase for the same bug pattern elsewhere. If the root cause is a misunderstanding (wrong API usage, missing null check), the same mistake may exist in other places.
+5. **Document the root cause** — briefly explain to the user what caused the bug and why, so the knowledge is captured. This prevents the same class of bug from recurring.
 
 ## Debugging Principles
 

@@ -1,6 +1,6 @@
 ---
 name: frontend-design
-description: Creates distinctive, production-grade frontend interfaces with high design quality. Use when the user asks to build, design, style, or lay out web components, pages, UI elements, or applications. Generates creative, polished code that avoids generic AI aesthetics.
+description: Creates distinctive, production-grade frontend interfaces with high design quality. Use when the user asks to build, create, design, style, lay out, or redesign web components, pages, UI elements, dashboards, landing pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.
 ---
 
 # Frontend Design
@@ -9,22 +9,32 @@ Create distinctive, production-grade interfaces that avoid generic "AI slop" aes
 
 ## Instructions
 
-### Step 1: Understand the Context
+### Step 1: Discover Project Context
 
-Before coding, gather requirements from the user's request:
+Before coding, inspect the existing project to match its patterns:
+
+1. **Check existing UI**: Search for existing components, styles, and layout patterns. Note the framework (React, Vue, vanilla), styling approach (CSS modules, Tailwind, styled-components), and component conventions.
+2. **Check design tokens**: Look for existing color palettes, typography scales, spacing systems, or design tokens that should be respected.
+3. **Check dependencies**: Read `package.json` or equivalent to see what UI libraries, animation tools, and font loaders are available.
+
+If the project has established patterns, follow them. If building from scratch, proceed to Step 2 with full creative freedom.
+
+### Step 2: Understand the Request
+
+Gather requirements from the user's request:
 
 1. **Purpose** — What problem does this interface solve? Who uses it?
 2. **Constraints** — Technical requirements (framework, performance, accessibility).
 3. **Tone** — If not specified, choose a bold aesthetic direction from options like: brutally minimal, maximalist chaos, retro-futuristic, organic/natural, luxury/refined, playful/toy-like, editorial/magazine, brutalist/raw, art deco/geometric, soft/pastel, industrial/utilitarian. Use these for inspiration but design one true to the chosen direction.
 4. **Differentiation** — What makes this interface unforgettable? Identify the one thing someone will remember.
 
-### Step 2: Commit to an Aesthetic Direction
+### Step 3: Commit to an Aesthetic Direction
 
 Choose a clear conceptual direction and execute it with precision. Bold maximalism and refined minimalism both work — the key is intentionality, not intensity.
 
 Vary between light and dark themes, different fonts, different aesthetics across generations. Never converge on the same choices repeatedly.
 
-### Step 3: Implement Working Code
+### Step 4: Implement Working Code
 
 Produce code (HTML/CSS/JS, React, Vue, etc.) that is:
 
@@ -35,7 +45,7 @@ Produce code (HTML/CSS/JS, React, Vue, etc.) that is:
 
 Match implementation complexity to the aesthetic vision. Maximalist designs need elaborate code with extensive animations and effects. Minimalist designs need restraint, precision, and careful attention to spacing, typography, and subtle details.
 
-### Step 4: Apply Aesthetic Guidelines
+### Step 5: Apply Aesthetic Guidelines
 
 Focus on these areas:
 
@@ -45,7 +55,7 @@ Focus on these areas:
 4. **Spatial Composition** — Unexpected layouts. Asymmetry. Overlap. Diagonal flow. Grid-breaking elements. Generous negative space OR controlled density.
 5. **Backgrounds & Visual Details** — Create atmosphere and depth rather than defaulting to solid colors. Apply creative forms: gradient meshes, noise textures, geometric patterns, layered transparencies, dramatic shadows, decorative borders, custom cursors, grain overlays.
 
-### Step 5: Avoid Generic Patterns
+### Step 6: Avoid Generic Patterns
 
 Never produce interfaces with:
 - Overused font families (Inter, Roboto, Arial, system fonts, Space Grotesk)
@@ -62,8 +72,9 @@ After implementation, verify the interface against these criteria:
 1. **Distinctiveness** — Could this be mistaken for a generic template? If yes, push the design further.
 2. **Cohesion** — Do typography, color, motion, and layout all support the same aesthetic direction?
 3. **Functionality** — Does the interface work correctly? Are interactions responsive and smooth?
-4. **Detail** — Are spacing, alignment, and transitions polished? Check for rough edges.
-5. **Memorability** — Is there at least one element that makes the interface unforgettable?
+4. **Accessibility** — Is text readable (sufficient contrast)? Are interactive elements keyboard-navigable? Is `prefers-reduced-motion` respected? Are semantic HTML elements used?
+5. **Detail** — Are spacing, alignment, and transitions polished? Check for rough edges.
+6. **Memorability** — Is there at least one element that makes the interface unforgettable?
 
 If any criterion fails, iterate on the design before presenting to the user.
 

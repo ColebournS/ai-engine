@@ -1,6 +1,6 @@
 ---
 name: terminal-command
-description: Formats terminal commands for fast, safe, copy-paste-friendly execution. Use when providing shell commands, CLI instructions, terminal snippets, one-liners, or any bash/zsh/command-line operations to the user.
+description: Formats terminal commands for fast, safe, copy-paste-friendly execution. Use when providing shell commands, CLI instructions, terminal snippets, one-liners, scripts, or any bash/zsh/command-line operations to the user.
 ---
 
 # Terminal Command
@@ -110,7 +110,7 @@ Before providing any command that **modifies, deletes, or could disrupt resource
 
 When a command supports `--dry-run` or an equivalent preview mode, suggest running it first so the user can verify before committing.
 
-Destructive signals to watch for: `delete`, `destroy`, `terminate`, `rm -rf`, `drop`, `force`, `--no-dry-run`, `--force`, `purge`, `reset`, scaling to zero, modifying IAM policies, changing security groups, database migrations on production.
+Destructive signals to watch for: `delete`, `destroy`, `terminate`, `rm -rf`, `drop`, `force`, `--no-dry-run`, `--force`, `purge`, `reset`, `--hard`, scaling to zero, modifying IAM policies, changing security groups, database migrations on production, force-pushing to shared branches.
 
 When concerned, present the situation to the user and wait for confirmation before giving the command.
 

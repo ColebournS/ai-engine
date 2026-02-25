@@ -13,6 +13,7 @@ A collection of reusable [SKILL.md](https://agentskills.io) agent skills for AI 
 | [plan-feature](skills/plan-feature/) | Creates implementation plans for features and tickets by analyzing requirements, gathering codebase context, and producing structured plans with risks, dependencies, and testing strategies. |
 | [skill-maker](skills/skill-maker/) | Creates new agent skills and refines existing ones following the SKILL.md open standard. |
 | [systematic-debugging](skills/systematic-debugging/) | Diagnoses bugs and test failures through structured root cause analysis using a four-phase process. |
+| [terminal-command](skills/terminal-command/) | Formats terminal commands for fast, safe, copy-paste-friendly execution with no placeholders, auto-waiting, and environment-aware caution. |
 | [test-writing](skills/test-writing/) | Writes tests using RED-GREEN-REFACTOR, discovering project test patterns and frameworks through code search. |
 
 ## Installation

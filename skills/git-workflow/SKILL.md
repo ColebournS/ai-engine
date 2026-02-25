@@ -1,6 +1,6 @@
 ---
 name: git-workflow
-description: Manages git operations including commit messages, branch management, and pull request preparation. Discovers project git conventions through repo history. Use when the user wants to commit, create a branch, prepare a PR, write a commit message, clean up git history, push changes, or manage branches.
+description: Manages git operations including commit messages, branch management, and pull request preparation. Discovers project git conventions through repo history. Use when the user wants to commit, create a branch, prepare a PR, write a commit message, clean up git history, push changes, manage branches, squash commits, rebase, or review staged changes.
 ---
 
 # Git Workflow
@@ -108,7 +108,8 @@ Keep it concise. Reviewers read dozens of PRs — respect their time.
 
 1. Push the branch: `git push -u origin HEAD`
 2. Create the PR using `gh pr create` with the title and description
-3. Return the PR URL to the user
+3. If CI checks are configured, monitor the initial check status with `gh pr checks` and flag any immediate failures
+4. Return the PR URL to the user
 
 ---
 

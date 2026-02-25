@@ -71,8 +71,13 @@ After inferring what you can, ask the user targeted questions to fill in gaps. U
 3. **Structure**: Decide what files are needed:
    - `SKILL.md` — always required
    - `references/` — for detailed docs the agent reads on demand
-   - `scripts/` — for executable utilities
+   - `scripts/` — for executable utilities and validation
    - `assets/` — for templates, schemas, static resources
+
+4. **Integration**: Does this skill need to orchestrate external tools?
+   - **Skills + MCP**: If the skill wraps MCP tools, it should orchestrate the workflow (sequence, validation, error recovery) while MCP provides the raw capability
+   - **Chained skills**: If the workflow spans multiple existing skills, reference them explicitly
+   - **Standalone**: Most skills are self-contained — only add integration when genuinely needed
 
 ### Step 4: Write the SKILL.md
 
@@ -88,6 +93,11 @@ After inferring what you can, ask the user targeted questions to fill in gaps. U
 | Dynamic context | Agent should inspect the project before acting |
 | Multi-file | Templates or reference docs are too large for SKILL.md |
 | Chained skills | Workflow composes multiple existing skills |
+| Plan-Validate-Execute | Complex/destructive operations needing a verifiable intermediate plan |
+| Sequential workflow orchestration | Multi-step processes with dependency ordering and rollback instructions |
+| Multi-MCP coordination | Cross-service workflows orchestrating multiple MCP tools with phase separation |
+| Iterative refinement | High-stakes outputs that improve with revision cycles and stopping conditions |
+| Context-aware tool selection | Dynamic routing via decision matrices based on input characteristics |
 
 Most skills combine 2-3 patterns. Choose the minimal set that covers the skill's needs.
 

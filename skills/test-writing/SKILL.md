@@ -1,6 +1,6 @@
 ---
 name: test-writing
-description: Writes tests using test-driven development (RED-GREEN-REFACTOR). Discovers project test patterns, frameworks, and conventions through code search before writing any tests. Use when the user wants to write tests, add test coverage, do TDD, fix a bug with a regression test, or asks to test, verify, or validate code.
+description: Writes tests using test-driven development (RED-GREEN-REFACTOR). Discovers project test patterns, frameworks, and conventions through code search before writing any tests. Use when the user wants to write tests, add test coverage, do TDD, fix a bug with a regression test, add a regression test, or asks to test, verify, validate, or cover code.
 ---
 
 # Test Writing
@@ -111,6 +111,7 @@ If multiple tests start failing after a change:
 - **Tests are documentation** — a reader should understand the system's behavior from test names alone
 - **Fast tests** — prefer unit tests over integration tests where possible. Slow tests get skipped.
 - **Independent tests** — no test should depend on another test's side effects or execution order
+- **Deterministic tests** — tests should produce the same result every time. Avoid relying on wall clock time, random data, or external services without proper isolation
 
 ## Error Handling
 
