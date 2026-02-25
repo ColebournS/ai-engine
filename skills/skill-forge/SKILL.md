@@ -1,6 +1,6 @@
 ---
 name: skill-forge
-description: Creates new agent skills and refines existing ones following the SKILL.md open standard. Use when the user wants to create, generate, scaffold, write, improve, refine, review, or iterate on an agent skill or SKILL.md file.
+description: Creates new agent skills and refines existing ones following the SKILL.md open standard. Use when the user wants to create, generate, scaffold, write, improve, refine, audit, or iterate on an agent skill or SKILL.md file.
 ---
 
 # Skill Forge
@@ -16,7 +16,7 @@ description: Creates new agent skills and refines existing ones following the SK
 
 ### Step 1: Gather Requirements
 
-First, locate and read the skills knowledge base (`SKILLS-KNOWLEDGE-BASE.md` at the root of the skills repository) to ground yourself in the full best practices, anti-patterns, design patterns, and specification details. If you cannot find it, proceed using the guidance in this skill.
+First, locate and read the skills knowledge base at `../../SKILLS-KNOWLEDGE-BASE.md` (relative to this skill's directory) to ground yourself in the full best practices, anti-patterns, design patterns, and specification details. If you cannot find it, proceed using the guidance in this skill.
 
 Then, before writing anything, determine what you can infer from the user's request and conversation context:
 
@@ -195,7 +195,7 @@ Summarize to the user what was created:
 
 ### Step 1: Read and Analyze
 
-1. Locate and read the skills knowledge base (`SKILLS-KNOWLEDGE-BASE.md` at the root of the skills repository) to ground yourself in best practices and anti-patterns. If you cannot find it, proceed using the guidance in this skill.
+1. Locate and read the skills knowledge base at `../../SKILLS-KNOWLEDGE-BASE.md` (relative to this skill's directory) to ground yourself in best practices and anti-patterns. If you cannot find it, proceed using the guidance in this skill.
 2. Read the existing `SKILL.md` and all supporting files for the skill being refined
 3. Read [quality-checklist.md](quality-checklist.md) for the full quality criteria
 4. Identify issues in these categories:

@@ -58,7 +58,7 @@ For each research question:
 **Search strategy tips:**
 - Vary query phrasing to surface different perspectives
 - Include terms like "vs", "comparison", "pros cons", "best practices" for evaluative topics
-- Include "2025" or "2026" for topics where recency matters
+- Include the current year for topics where recency matters
 - Search for counterarguments and criticisms, not just positive coverage
 - If a topic has academic depth, search for papers, studies, or technical specifications
 

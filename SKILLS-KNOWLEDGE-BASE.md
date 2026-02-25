@@ -154,7 +154,7 @@ Challenge each piece of information:
 - "Does the agent really need this explanation?"
 
 **Good** (~50 tokens):
-```markdown
+````markdown
 ## Extract PDF text
 
 Use pdfplumber for text extraction:
@@ -164,17 +164,17 @@ import pdfplumber
 with pdfplumber.open("file.pdf") as pdf:
     text = pdf.pages[0].extract_text()
 ```
-```
+````
 
 **Bad** (~150 tokens):
-```markdown
+````markdown
 ## Extract PDF text
 
 PDF (Portable Document Format) files are a common file format that contains
 text, images, and other content. To extract text from a PDF, you'll need to
 use a library. There are many libraries available for PDF processing, but
 pdfplumber is recommended because it's easy to use...
-```
+````
 
 ### 4.2 Write Effective Descriptions
 
@@ -346,7 +346,7 @@ Always tell the agent exactly where to find and place files:
 
 Provide output format templates with appropriate strictness:
 
-```markdown
+````markdown
 ## Report structure
 
 ALWAYS use this exact template:
@@ -365,7 +365,7 @@ ALWAYS use this exact template:
 1. Specific actionable recommendation
 2. Specific actionable recommendation
 ```
-```
+````
 
 ### 6.2 Examples Pattern
 
@@ -712,7 +712,7 @@ Understanding when to use each mechanism:
 ### Official Sources
 - [Agent Skills Specification](https://agentskills.io/specification) — The formal SKILL.md specification
 - [What Are Skills?](https://agentskills.io/what-are-skills) — Conceptual overview
-- [Anthropic Skills Repository](https://github.com/anthropics/skills) — Official skill examples (75k+ stars)
+- [Anthropic Skills Repository](https://github.com/anthropics/skills) — Official skill examples and reference implementations
 - [Anthropic Best Practices Guide](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices) — Official authoring best practices
 
 ### Community Resources
