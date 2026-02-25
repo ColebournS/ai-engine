@@ -8,7 +8,8 @@ A collection of reusable [SKILL.md](https://agentskills.io) agent skills for AI 
 |-------|-------------|
 | [code-review](skills/code-review/) | Reviews code for bugs, security vulnerabilities, performance issues, edge cases, and consistency with codebase patterns. |
 | [deep-research](skills/deep-research/) | Performs comprehensive multi-source research on any topic, producing well-sourced reports with inline citations. |
-| [skill-forge](skills/skill-forge/) | Creates new agent skills and refines existing ones following the SKILL.md open standard. |
+| [plan-feature](skills/plan-feature/) | Creates implementation plans for features and tickets by analyzing requirements, gathering codebase context, and producing structured plans with risks, dependencies, and testing strategies. |
+| [skill-maker](skills/skill-maker/) | Creates new agent skills and refines existing ones following the SKILL.md open standard. |
 
 ## Installation
 
@@ -36,7 +37,7 @@ cp -r skills/* /path/to/your/project/.claude/skills/
 
 ## Creating New Skills
 
-Use the `skill-forge` skill to create new skills interactively, or refer to [SKILLS-KNOWLEDGE-BASE.md](SKILLS-KNOWLEDGE-BASE.md) for the full specification and best practices.
+Use the `skill-maker` skill to create new skills interactively, or refer to [SKILLS-KNOWLEDGE-BASE.md](SKILLS-KNOWLEDGE-BASE.md) for the full specification and best practices.
 
 ## License
 

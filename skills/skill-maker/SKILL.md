@@ -1,9 +1,9 @@
 ---
-name: skill-forge
+name: skill-maker
 description: Creates new agent skills and refines existing ones following the SKILL.md open standard. Use when the user wants to create, generate, scaffold, write, improve, refine, audit, or iterate on an agent skill or SKILL.md file.
 ---
 
-# Skill Forge
+# Skill Maker
 
 ## Determine the Mode
 
@@ -22,10 +22,9 @@ Then, before writing anything, determine what you can infer from the user's requ
 
 1. **Purpose**: What specific task or workflow should this skill handle?
 2. **Scope**: Is this focused on a single task or a multi-step workflow?
-3. **Target users**: Personal use or shared with a team?
-4. **Trigger scenarios**: What will users say or do that should activate this skill?
-5. **Domain knowledge**: What does the agent need that it wouldn't already know?
-6. **Freedom level**: How prescriptive should the instructions be?
+3. **Trigger scenarios**: What will users say or do that should activate this skill?
+4. **Domain knowledge**: What does the agent need that it wouldn't already know?
+5. **Freedom level**: How prescriptive should the instructions be?
    - **High freedom** (guidelines) — multiple valid approaches exist
    - **Medium freedom** (templates/pseudocode) — preferred pattern with variation
    - **Low freedom** (exact scripts) — fragile operations, consistency critical
@@ -40,7 +39,6 @@ After inferring what you can, ask the user targeted questions to fill in gaps. U
 
 1. **Scope** — What should the skill cover and what's out of scope? Offer concrete options based on what the skill could reasonably include (e.g., "Review only diffs" vs "Review full files" vs "Both").
 2. **Priorities** — What aspects matter most? List the plausible focus areas for the skill's domain and let the user select. This shapes which concerns get prominent coverage vs brief mention.
-3. **Placement** — Where should the skill live? (skills repo, global `~/.cursor/skills/`, or project-specific `.cursor/skills/`)
 
 **Ask about these when relevant:**
 
@@ -161,19 +159,13 @@ Run through the quality checklist in [quality-checklist.md](quality-checklist.md
 
 ### Step 7: Place the Skill
 
-Determine the target location based on the user's intent:
+Always place new skills in this repo at `skills/{skill-name}/SKILL.md`.
 
-| Scope | Location |
-|-------|----------|
-| This skills repo | `skills/{skill-name}/SKILL.md` |
-| Personal (global) | `~/.cursor/skills/{skill-name}/SKILL.md` |
-| Project-specific | `{project}/.cursor/skills/{skill-name}/SKILL.md` |
-
-If placing in this repo, use name prefixes to indicate domain:
+Use name prefixes to indicate domain:
 
 | Prefix | Domain | Examples |
 |--------|--------|----------|
-| (none) | Core workflow | `skill-forge`, `code-review` |
+| (none) | Core workflow | `skill-maker`, `code-review` |
 | `ui-` | Frontend/UI | `ui-design-system` |
 | `db-`, `api-`, `auth-` | Backend | `db-postgres`, `api-rest` |
 | `infra-` | Infrastructure | `infra-docker`, `infra-terraform` |
