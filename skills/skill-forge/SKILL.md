@@ -18,7 +18,7 @@ description: Creates new agent skills and refines existing ones following the SK
 
 First, locate and read the skills knowledge base (`SKILLS-KNOWLEDGE-BASE.md` at the root of the skills repository) to ground yourself in the full best practices, anti-patterns, design patterns, and specification details. If you cannot find it, proceed using the guidance in this skill.
 
-Then, before writing anything, determine:
+Then, before writing anything, determine what you can infer from the user's request and conversation context:
 
 1. **Purpose**: What specific task or workflow should this skill handle?
 2. **Scope**: Is this focused on a single task or a multi-step workflow?
@@ -30,11 +30,32 @@ Then, before writing anything, determine:
    - **Medium freedom** (templates/pseudocode) — preferred pattern with variation
    - **Low freedom** (exact scripts) — fragile operations, consistency critical
 
-If the user hasn't specified enough, use the AskQuestion tool (if available) or ask conversationally. At minimum you need purpose and trigger scenarios.
+If you have conversation context (e.g., the user just completed a workflow manually), infer what you can from what was discussed — capture the patterns, decisions, and context they repeatedly provided.
 
-If you have conversation context (e.g., the user just completed a workflow manually), infer the skill from what was discussed — capture the patterns, decisions, and context they repeatedly provided.
+### Step 2: Ask Clarifying Questions
 
-### Step 2: Design the Skill
+After inferring what you can, ask the user targeted questions to fill in gaps. Use the AskQuestion tool (if available) or ask conversationally. This step is critical — assumptions lead to inaccurate skills.
+
+**Always ask about these (unless already clear from context):**
+
+1. **Scope** — What should the skill cover and what's out of scope? Offer concrete options based on what the skill could reasonably include (e.g., "Review only diffs" vs "Review full files" vs "Both").
+2. **Priorities** — What aspects matter most? List the plausible focus areas for the skill's domain and let the user select. This shapes which concerns get prominent coverage vs brief mention.
+3. **Placement** — Where should the skill live? (skills repo, global `~/.cursor/skills/`, or project-specific `.cursor/skills/`)
+
+**Ask about these when relevant:**
+
+4. **Output format** — If the skill produces output (reports, code, docs), does the user want a specific structure or is flexible format fine?
+5. **Interaction style** — Should the skill be opinionated (strong defaults, push back) or neutral (present options, let the user decide)?
+6. **Existing conventions** — Are there project-specific patterns, tools, or standards the skill should enforce or follow?
+
+**Question design guidelines:**
+- Tailor questions to the specific skill being created — use concrete options, not abstract choices
+- Provide 2-4 options per question, phrased in terms the user would naturally understand
+- Include an "all of the above" or "both" option where it makes sense
+- Skip questions where the answer is obvious from context
+- Batch all questions into a single prompt rather than asking one at a time
+
+### Step 3: Design the Skill
 
 1. **Name**: Derive a clear name following these rules:
    - Lowercase letters, numbers, hyphens only
@@ -55,7 +76,7 @@ If you have conversation context (e.g., the user just completed a workflow manua
    - `scripts/` — for executable utilities
    - `assets/` — for templates, schemas, static resources
 
-### Step 3: Write the SKILL.md
+### Step 4: Write the SKILL.md
 
 **Select design patterns** that fit the skill's purpose. Choose from:
 
@@ -123,7 +144,7 @@ Not every section is needed for every skill. Omit sections that don't apply. The
 - Reference files must be one level deep from SKILL.md (no nested chains)
 - For reference files over 100 lines, include a table of contents at the top
 
-### Step 4: Create Reference Files (if needed)
+### Step 5: Create Reference Files (if needed)
 
 Only create reference files when SKILL.md would exceed 500 lines or when content is only needed for specific subtasks.
 
@@ -134,11 +155,11 @@ Link from SKILL.md directly:
 - For examples, see [references/examples.md](references/examples.md)
 ```
 
-### Step 5: Validate
+### Step 6: Validate
 
 Run through the quality checklist in [quality-checklist.md](quality-checklist.md). Fix any issues before considering the skill complete.
 
-### Step 6: Place the Skill
+### Step 7: Place the Skill
 
 Determine the target location based on the user's intent:
 
@@ -160,7 +181,7 @@ If placing in this repo, use name prefixes to indicate domain:
 
 Category subdirectories (e.g., `skills/core/`, `skills/backend/`) are optional — introduce them once the repo has enough skills to benefit from grouping.
 
-### Step 7: Present Results
+### Step 8: Present Results
 
 Summarize to the user what was created:
 - Skill name and description
