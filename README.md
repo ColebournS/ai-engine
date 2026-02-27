@@ -42,7 +42,7 @@ cp -r skills/* /path/to/your/project/.claude/skills/
 
 ## Creating New Skills
 
-Use the `skill-maker` skill to create new skills interactively, or refer to [SKILLS-KNOWLEDGE-BASE.md](SKILLS-KNOWLEDGE-BASE.md) for the full specification and best practices.
+Use the `skill-maker` skill to create new skills interactively, or refer to [SKILLS-KNOWLEDGE-BASE.md](/skills/SKILLS-KNOWLEDGE-BASE.md) for the full specification and best practices.
 
 ## License
 

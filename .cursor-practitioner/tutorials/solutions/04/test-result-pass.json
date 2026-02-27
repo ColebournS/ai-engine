@@ -1,0 +1,9 @@
+{
+  "verdict": "PASS",
+  "phase_1": {
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "unit_tests": "PASS"
+  },
+  "produced_by": "jg-tester"
+}
